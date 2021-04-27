@@ -1,0 +1,21 @@
+{
+    "name": "ricopc/phpmvc",
+    "authors":
+    [
+        {
+            "name": "Rico-Jose",
+            "email": "imbangjoserico@gmail.com"
+        }
+    ],
+    "autoload": 
+    {
+        "psr-4": 
+        {
+            "app\\": "./"
+        }
+    },
+    "require":
+    {
+
+    }
+}

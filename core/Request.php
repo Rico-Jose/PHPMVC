@@ -18,7 +18,6 @@ class Request
             return $path;
         }
         return substr($path, 0, $position);
-        
     }
 
     public function getMethod()

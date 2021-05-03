@@ -14,8 +14,7 @@ class Request
         // its position.
         $position = strpos($path, '?');
 
-        if ($position === false)
-        {
+        if ($position === false) {
             return $path;
         }
         return substr($path, 0, $position);

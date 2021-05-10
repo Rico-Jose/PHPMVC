@@ -4,6 +4,7 @@ namespace app\core;
 
 abstract class Model
 {
+    // Define the validation rules.
     public const RULE_REQUIRED = 'required';
     public const RULE_EMAIL = 'email';
     public const RULE_MIN = 'min';
@@ -20,6 +21,7 @@ abstract class Model
         }
     }
 
+    // Force the model to set rules.
     abstract public function rules(): array;
 
     public array $errors = [];
@@ -72,5 +74,15 @@ abstract class Model
             self::RULE_MAX => 'Min length of this field must be {max}',
             self::RULE_MATCH => 'This field must be the same as {match}'
         ];
+    }
+
+    public function hasError($attribute)
+    {
+        return $this->errors[$attribute] ?? false;
+    }
+
+    public function getFirstError($attribute)
+    {
+        return $this->errors[$attribute][0] ?? false;
     }
 }
